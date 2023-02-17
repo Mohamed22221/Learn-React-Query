@@ -11,7 +11,7 @@ export const SuperHeroesPage = () => {
       setIsLoading(false)
     })
   }, [])
-
+  console.log(data)
   if (isLoading) {
     return <h2>Loading...</h2>
   }
@@ -20,7 +20,7 @@ export const SuperHeroesPage = () => {
     <>
       <h2>Super Heroes Page</h2>
       {data.map(hero => {
-        return <div>{hero.name}</div>
+        return <div>{hero.title}</div>
       })}
     </>
   )
