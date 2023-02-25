@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link, Routes } from 'react-router-dom'
 import './App.css'
 import { HomePage } from './components/Home.page'
+import RqMoreIds from './components/RqMoreIds'
 import { RQSuperHeroPage } from './components/RQSuperHero.page'
 import { RQSuperHeroesPage } from './components/RQSuperHeroes.page'
 import { SuperHeroesPage } from './components/SuperHeroes.page'
@@ -20,6 +21,9 @@ function App() {
           <li>
             <Link to='/rq-super-heroes'>RQ Super Heroes</Link>
           </li>
+          <li>
+            <Link to='/super-heroes-ids'>Ids Heroes</Link>
+          </li>
         </ul>
       </nav>
      
@@ -27,8 +31,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/rq-super-heroes" element={<RQSuperHeroesPage />} />
           <Route path="/rq-super-heroes/:postId" element={<RQSuperHeroPage />} />
-
           <Route path="/super-heroes" element={<SuperHeroesPage />} />
+          <Route path="/super-heroes-ids" element={<RqMoreIds heroIds={[1,3]}/>} />
+
 
 
 
