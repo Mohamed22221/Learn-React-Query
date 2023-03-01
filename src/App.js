@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Routes } from 'react-rout
 import './App.css'
 import Dependent from './components/Dependent'
 import { HomePage } from './components/Home.page'
+import PaginationColors from './components/PaginationColors'
 import RqMoreIds from './components/RqMoreIds'
 import { RQSuperHeroPage } from './components/RQSuperHero.page'
 import { RQSuperHeroesPage } from './components/RQSuperHeroes.page'
@@ -28,6 +29,9 @@ function App() {
           <li>
             <Link to='/super-heroes-Dependent'>Dependent</Link>
           </li>
+          <li>
+            <Link to='/super-colors-pagination'>Colors Pagination</Link>
+          </li>
         </ul>
       </nav>
      
@@ -38,6 +42,8 @@ function App() {
           <Route path="/super-heroes" element={<SuperHeroesPage />} />
           <Route path="/super-heroes-ids" element={<RqMoreIds heroIds={[1,3]}/>} />
           <Route path="/super-heroes-Dependent" element={<Dependent email="hamdymohame72gmail.com"/>} />
+          <Route path="/super-colors-pagination" element={<PaginationColors />} />
+
         </Routes>
       </Router>
     </div>

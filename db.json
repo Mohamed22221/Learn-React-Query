@@ -30,21 +30,55 @@
       "title": "nesciunt quas odio",
       "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
     }
-  ] ,
-  "users" : [
+  ],
+  "users": [
     {
-      "id" : "hamdymohame72gmail.com",
-      "channalId" : "MohamedCode"
+      "id": "hamdymohame72gmail.com",
+      "channalId": "MohamedCode"
     },
     {
-      "id" : "hamdymohame722gmail.com",
-      "channalId" : "MohamedCodeee"
+      "id": "hamdymohame722gmail.com",
+      "channalId": "MohamedCodeee"
     }
   ],
-  "channals" : [
+  "channals": [
     {
-      "id" : "MohamedCode",
-      "channalId" : ["react" , "css" , "javascript"  ]
+      "id": "MohamedCode",
+      "channalId": ["react", "css", "javascript"]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "white"
+    },
+    {
+      "id": 7,
+      "label": "orange"
+    },
+    {
+      "id": 8,
+      "label": "purple"
     }
   ]
 }
