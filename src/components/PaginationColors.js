@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 
 const PaginationColors = () => {
   const [paginationNum, setPaginationNum] = useState(1);
-  const { data, isLoading, isError, error, isFetched } = useQuery(
+  const { data, isLoading, isError, error, isFetching } = useQuery(
     ["colors", paginationNum],
     () =>
       axios.get(`http://localhost:4000/colors?_limit=2&_page=${paginationNum}`),
@@ -12,7 +12,7 @@ const PaginationColors = () => {
       keepPreviousData: true,
     }
   );
-  console.log();
+
 
   if (isLoading) {
     return <h2>Loading...</h2>;
@@ -45,7 +45,7 @@ const PaginationColors = () => {
       >
         Next+
       </button>
-      {isFetched === false && "..loading"}
+      {isFetching  && "..loading"}
     </>
   );
 };

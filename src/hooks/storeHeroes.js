@@ -1,8 +1,26 @@
 import axios from "axios";
-import { useQuery, useQueryClient } from "react-query";
+import { useMutation, useQuery, useQueryClient } from "react-query";
+
+const addSuperHero = (data) => {
+  return axios.post("http://localhost:4000/posts", data);
+};
 
 export const StoreHeroes = (key) => {
   return useQuery(key, () => axios.get("http://localhost:4000/posts"));
+};
+
+export const PostHeroes = () => {
+  const queryClient = useQueryClient()
+  return useMutation(addSuperHero , {
+    onSuccess : (data) =>{
+      queryClient.setQueriesData("posts" , (oldData) =>{
+        return {
+          ...oldData ,
+          data : [...oldData.data , data.data]
+        }
+      })
+    }
+  });
 };
 
 export const StoreHero = (key, id) => {
